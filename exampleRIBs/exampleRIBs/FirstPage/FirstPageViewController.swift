@@ -20,10 +20,16 @@ protocol FirstPagePresentableListener: class {
 }
 
 final class FirstPageViewController: UIViewController, StoryboardBased, FirstPagePresentable, FirstPageViewControllable {
+    func changeLabel() {
+        testLabel.text = "changed!!\n\(DateInterval.init().description)"
+    }
+    
 
     @IBOutlet weak var secondTwoButton: UIButton!
     
     @IBOutlet weak var secondOneButton: UIButton!
+    @IBOutlet weak var testLabel: UILabel!
+
     private let disposeBag = DisposeBag()
 
     weak var listener: FirstPagePresentableListener?

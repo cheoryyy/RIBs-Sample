@@ -15,8 +15,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Page RIB" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ARs-Dy-egc">
-                                <rect key="frame" x="134.5" y="90" width="106.5" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Page RIB" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ARs-Dy-egc">
+                                <rect key="frame" x="30" y="90" width="315" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -35,13 +35,16 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="ARs-Dy-egc" firstAttribute="top" secondItem="HgA-Aw-ocO" secondAttribute="top" constant="90" id="dlA-Kr-wOJ"/>
+                            <constraint firstItem="HgA-Aw-ocO" firstAttribute="trailing" secondItem="ARs-Dy-egc" secondAttribute="trailing" constant="30" id="eiy-WJ-NGL"/>
                             <constraint firstItem="ARs-Dy-egc" firstAttribute="centerX" secondItem="BNZ-bO-rhc" secondAttribute="centerX" id="mwU-26-qtW"/>
+                            <constraint firstItem="ARs-Dy-egc" firstAttribute="leading" secondItem="HgA-Aw-ocO" secondAttribute="leading" constant="30" id="sqM-aX-u4b"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="HgA-Aw-ocO"/>
                     </view>
                     <connections>
                         <outlet property="secondOneButton" destination="A2Q-ha-tjW" id="Ero-Sc-lb3"/>
                         <outlet property="secondTwoButton" destination="0U9-Ld-YCW" id="AQ7-cw-6Vs"/>
+                        <outlet property="testLabel" destination="ARs-Dy-egc" id="Yzz-EN-YMe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k0X-am-vwV" userLabel="First Responder" sceneMemberID="firstResponder"/>

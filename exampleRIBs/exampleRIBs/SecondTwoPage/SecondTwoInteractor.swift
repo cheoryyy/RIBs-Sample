@@ -11,6 +11,7 @@ import RxSwift
 
 protocol SecondTwoRouting: ViewableRouting {
     // TODO: Declare methods the interactor can invoke to manage sub-tree via the router.
+    func backToPage()
 }
 
 protocol SecondTwoPresentable: Presentable {
@@ -23,6 +24,10 @@ protocol SecondTwoListener: class {
 }
 
 final class SecondTwoInteractor: PresentableInteractor<SecondTwoPresentable>, SecondTwoInteractable, SecondTwoPresentableListener {
+    func backAction() {
+        router?.backToPage()
+    }
+    
 
     weak var router: SecondTwoRouting?
     weak var listener: SecondTwoListener?

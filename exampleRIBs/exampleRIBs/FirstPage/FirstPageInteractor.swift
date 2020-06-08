@@ -18,6 +18,7 @@ protocol FirstPageRouting: ViewableRouting {
 protocol FirstPagePresentable: Presentable {
     var listener: FirstPagePresentableListener? { get set }
     // TODO: Declare methods the interactor can invoke the presenter to present data.
+    func changeLabel()
 }
 
 protocol FirstPageListener: class {
@@ -25,6 +26,13 @@ protocol FirstPageListener: class {
 }
 
 final class FirstPageInteractor: PresentableInteractor<FirstPagePresentable>, FirstPageInteractable, FirstPagePresentableListener {
+    
+    // MARK: - SecondOne Listener
+    func tossToFirstPage() {
+        presenter.changeLabel()
+    }
+    
+    // MARK: - Presentable Protocal
     func moveToSecondOnePage() {
         router?.routeSecondOne()
     }

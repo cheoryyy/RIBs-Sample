@@ -20,9 +20,14 @@ protocol SecondOnePresentable: Presentable {
 
 protocol SecondOneListener: class {
     // TODO: Declare methods the interactor can invoke to communicate with other RIBs.
+    func tossToFirstPage()
 }
 
 final class SecondOneInteractor: PresentableInteractor<SecondOnePresentable>, SecondOneInteractable, SecondOnePresentableListener {
+    func changeLabel() {
+        listener?.tossToFirstPage()
+    }
+    
 
     weak var router: SecondOneRouting?
     weak var listener: SecondOneListener?

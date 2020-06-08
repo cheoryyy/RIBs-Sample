@@ -15,9 +15,14 @@ protocol SecondTwoInteractable: Interactable {
 
 protocol SecondTwoViewControllable: ViewControllable {
     // TODO: Declare methods the router invokes to manipulate the view hierarchy.
+    func dismiss(viewController: ViewControllable)
 }
 
 final class SecondTwoRouter: ViewableRouter<SecondTwoInteractable, SecondTwoViewControllable>, SecondTwoRouting {
+    func backToPage() {
+        viewController.dismiss(viewController: viewController)
+    }
+    
 
     // TODO: Constructor inject child builder protocols to allow building children.
     override init(interactor: SecondTwoInteractable, viewController: SecondTwoViewControllable) {

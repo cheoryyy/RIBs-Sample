@@ -15,29 +15,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Page RIB" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ARs-Dy-egc">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Intrinsic Size" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ARs-Dy-egc">
                                 <rect key="frame" x="30" y="90" width="315" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A2Q-ha-tjW">
-                                <rect key="frame" x="47" y="197" width="85" height="30"/>
+                                <rect key="frame" x="46" y="197" width="87" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Second One"/>
+                                <state key="normal" title="OriginButton"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0U9-Ld-YCW">
-                                <rect key="frame" x="234" y="197" width="84" height="30"/>
+                                <rect key="frame" x="227" y="197" width="99" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Second Two"/>
+                                <state key="normal" title="ChangeButton"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="ARs-Dy-egc" firstAttribute="centerX" secondItem="BNZ-bO-rhc" secondAttribute="centerX" id="240-Ky-uku"/>
+                            <constraint firstItem="ARs-Dy-egc" firstAttribute="leading" secondItem="HgA-Aw-ocO" secondAttribute="leading" constant="30" id="SVW-Kh-s37"/>
                             <constraint firstItem="ARs-Dy-egc" firstAttribute="top" secondItem="HgA-Aw-ocO" secondAttribute="top" constant="90" id="dlA-Kr-wOJ"/>
-                            <constraint firstItem="HgA-Aw-ocO" firstAttribute="trailing" secondItem="ARs-Dy-egc" secondAttribute="trailing" constant="30" id="eiy-WJ-NGL"/>
-                            <constraint firstItem="ARs-Dy-egc" firstAttribute="centerX" secondItem="BNZ-bO-rhc" secondAttribute="centerX" id="mwU-26-qtW"/>
-                            <constraint firstItem="ARs-Dy-egc" firstAttribute="leading" secondItem="HgA-Aw-ocO" secondAttribute="leading" constant="30" id="sqM-aX-u4b"/>
+                            <constraint firstItem="HgA-Aw-ocO" firstAttribute="trailing" secondItem="ARs-Dy-egc" secondAttribute="trailing" constant="30" id="fOA-Cq-sAi"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="HgA-Aw-ocO"/>
                     </view>

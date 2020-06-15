@@ -20,10 +20,41 @@ protocol FirstPagePresentableListener: class {
 }
 
 final class FirstPageViewController: UIViewController, StoryboardBased, FirstPagePresentable, FirstPageViewControllable {
+    
+    
+    
     func changeLabel() {
-        testLabel.text = "changed!!\n\(DateInterval.init().description)"
+        testLabel.text = "changed!! 길게 글을 써보자요 !!!!!!\n 개행 개행 개행 ~)"
+        
+        
+        print("testLabel size(changed) : \(self.testLabel.frame.size)")
+        print("testLabel Intrinsic size(changed) : \(self.testLabel.intrinsicContentSize)")
+        
+        self.view.layoutIfNeeded() // 됨
+        print("view.layoutIfNeeded")
+
+        print("testLabel size(changed) layoutIfNeeded: \(self.testLabel.frame.size)")
+        print("testLabel Intrinsic size(changed) layoutIfNeeded: \(self.testLabel.intrinsicContentSize)")
+
     }
     
+    
+    
+    
+    
+    
+    
+    
+    
+    func originLabel() {
+        testLabel.text = "Intrinsic Size"
+        
+        
+        print("testLabel size : \(self.testLabel.frame.size)")
+        print("testLabel Intrinsic size : \(self.testLabel.intrinsicContentSize)")
+
+    }
+
 
     @IBOutlet weak var secondTwoButton: UIButton!
     
@@ -39,14 +70,16 @@ final class FirstPageViewController: UIViewController, StoryboardBased, FirstPag
         secondTwoButton.rx.tap
             .subscribe(onNext: { [weak self] in
                 print("Tap!!")
-                self?.listener?.moveToSecondTwoPage()
+//                self?.listener?.moveToSecondTwoPage()
+                self?.changeLabel()
             })
             .disposed(by: disposeBag)
 
         secondOneButton.rx.tap
             .subscribe(onNext: { [weak self] in
                 print("Tap!!")
-                self?.listener?.moveToSecondOnePage()
+//                self?.listener?.moveToSecondOnePage()
+                self?.originLabel()
             })
             .disposed(by: disposeBag)
 

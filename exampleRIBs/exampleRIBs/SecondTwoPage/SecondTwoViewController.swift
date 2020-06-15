@@ -24,17 +24,17 @@ final class SecondTwoViewController: UIViewController, SecondTwoPresentable, Sec
         dismiss(animated: true, completion: nil)
     }
     
-
+    
     weak var listener: SecondTwoPresentableListener?
     private let disposeBag = DisposeBag()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         view.backgroundColor = UIColor.white
         buildBackButton()
     }
-
+    
     private func buildBackButton() {
         let backButton = UIButton()
         view.addSubview(backButton)
@@ -53,5 +53,5 @@ final class SecondTwoViewController: UIViewController, SecondTwoPresentable, Sec
             })
             .disposed(by: disposeBag)
     }
-
+    
 }
